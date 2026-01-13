@@ -1,0 +1,60 @@
+/* NAVBAR */
+.navbar {
+    background-color: #000000; 
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+  
+  .nav-buttons button {
+    margin-left: 1rem;
+    padding: 0.5rem 1.2rem;
+    background-color: transparent;
+    color: white;
+    border: 0.1rem solid white;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  
+  .nav-buttons button:hover {
+    box-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, 0.6);
+    transform: translateY(-0.1rem);
+  }
+  
+  /* LAYOUT */
+  .layout {
+    display: flex;
+    flex-direction: row-reverse;
+    height: calc(100vh - 4rem);
+  }
+  
+  /* SIDEBAR */
+  .sidebar {
+    width: 25%;
+    background-color: #242424;
+    color: white;
+    padding: 2rem;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    margin-bottom: 1.2rem;
+    cursor: pointer;
+  }
+  
+  /* CONTENT */
+  .content {
+    width: 75%;
+    padding: 2rem;
+  }
+  
