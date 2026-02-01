@@ -23,6 +23,21 @@
     <main class="content">
       <h1>Bienvenido</h1>
       <p>Aquí va el contenido de la página</p>
+      <div class="container mt-4">
+        <h2>📰 Noticias de Música</h2>
+
+        <div *ngFor="let noticia of noticias" class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title">{{ noticia.titular }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">
+            Tema: {{ noticia.tema }}
+            </h6>
+            <p class="card-text">
+            {{ noticia.contenido }}
+            </p>
+          </div>
+        </div>
+      </div>
     </main>
   </div>
   
