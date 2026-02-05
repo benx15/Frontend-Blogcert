@@ -24,7 +24,7 @@
       <div class="container mt-4">
         <h2>📰 Noticias de Música</h2>
 
-        <div *ngFor="let noticia of noticias" class="card mb-3">
+        <div *ngFor="let noticia of noticias | slice:0:4" class="card mb-3">
           <div class="card-body">
             <h5 class="card-title">{{ noticia.titular }}</h5>
             <h6 class="card-subtitle mb-2 text-muted">
