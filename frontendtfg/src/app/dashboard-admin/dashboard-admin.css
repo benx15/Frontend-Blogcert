@@ -1,0 +1,113 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+.navbar {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    padding: 16px 24px;
+    border-bottom: 1px solid #333;
+}
+  
+.navbar h2 {
+    font-size: 20px;
+    font-weight: 600;
+}
+  
+.tabla-container {
+    padding: 24px;
+    background-color: #242424;
+    min-height: calc(100vh - 64px);
+}
+  
+.info {
+    color: #bbbbbb;
+    margin-bottom: 12px;
+}
+  
+.error {
+    color: #ff6b6b;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+  
+.table-wrapper {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    overflow-x: auto;
+    box-shadow: 0 0 0 1px #333;
+}
+  
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 900px;
+}
+  
+
+thead {
+    background-color: #2e2e2e;
+}
+  
+thead th {
+    padding: 12px 14px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 600;
+    color: #e0e0e0;
+    border-bottom: 1px solid #3a3a3a;
+}
+  
+tbody td {
+    padding: 10px 14px;
+    font-size: 13.5px;
+    color: #d4d4d4;
+    border-bottom: 1px solid #333;
+}
+  
+
+tbody tr:hover {
+    background-color: #2a2a2a;
+}
+  
+tbody tr:last-child td {
+    border-bottom: none;
+}
+  
+
+.paginacion {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    color: #d4d4d4;
+}
+  
+.paginacion button {
+    background-color: #3a3a3a;
+    color: #ffffff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+  
+.paginacion button:hover:not(:disabled) {
+    background-color: #4a4a4a;
+}
+  
+.paginacion button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+  
+.paginacion span {
+    font-size: 13px;
+}
+  

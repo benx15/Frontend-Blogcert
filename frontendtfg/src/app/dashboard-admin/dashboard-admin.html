@@ -1,2 +1,45 @@
 <p>Funciones: mostrar TODOS los usuarios, modificar, crear usuarios trabajador, eliminar usuarios </p>
 
+
+<nav class="navbar">
+    <h2>Dashboard Admin</h2>
+</nav>
+<div class="tabla-container">
+  
+    <div *ngIf="cargando" class="info">Cargando usuarios...</div>
+    <div *ngIf="error" class="error">{{ error }}</div>
+  
+    <div class="table-wrapper" *ngIf="!cargando && !error">
+      <table>
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Edad</th>
+            <th>Correo electronico</th>
+            <th>Rol</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of usuariosPaginados()">
+            <td>{{ user.username }}</td>
+            <td>{{ user.password }}</td>
+            <td>{{ user.nombre }}</td>
+            <td>{{ user.apellidos }}</td>
+            <td>{{ user.fechaRegistro | date }}</td>
+            <td>{{ user.fechaNacimiento | date }}</td>
+            <td>{{ user.direccion }}</td>
+            <td>{{ user.perfil.idPerfil }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <div class="paginacion" *ngIf="usuarios.length > itemsPorPagina">
+      <button (click)="anteriorPagina()" [disabled]="paginaActual === 1">Anterior</button>
+      <span>Página {{ paginaActual }} de {{ totalPaginas() }}</span>
+      <button (click)="siguientePagina()" [disabled]="paginaActual * itemsPorPagina >= usuarios.length">Siguiente</button>
+    </div>
+  </div>
