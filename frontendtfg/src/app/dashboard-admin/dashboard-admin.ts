@@ -110,7 +110,7 @@ export class DashboardAdmin implements OnInit {
     };
   }
   guardarUsuario(): void {
-    if (!this.usuarioForm.nombre || !this.usuarioForm.email) {
+    if (!this.usuarioForm.username || !this.usuarioForm.email) {
       alert('Por favor, completa los campos obligatorios (Nombre y Email)');
       return;
     }
@@ -153,12 +153,16 @@ export class DashboardAdmin implements OnInit {
     const usuarioActualizado = {
       _id: this.usuarioForm._id,
       username: this.usuarioForm.username,
+      password: this.usuarioForm.password,
       name: this.usuarioForm.name,
       lastName: this.usuarioForm.lastName,
       age: this.usuarioForm.age,
       email: this.usuarioForm.email,
       rol: this.usuarioForm.rol
     };
+    if (this.usuarioForm.password && this.usuarioForm.password.trim() !== '') {
+      usuarioActualizado.password = this.usuarioForm.password;
+    }
     this.adminService.actualizar(this.usuarioForm._id, usuarioActualizado).subscribe({
       next: (response) => {
         console.log('Usuario actualizado:', response);
@@ -183,8 +187,13 @@ export class DashboardAdmin implements OnInit {
       next: (response) => {
         console.log('Usuario eliminado:', response);
         alert('Usuario eliminado satisfactoriamente');
-        this.cargar();
+        this.usuarios = this.usuarios.filter(u => u._id !== id);
         this.calcularPaginacion();
+      
+        if (this.usuariosPaginados.length === 1 && this.paginaActual > 1) {
+          this.paginaActual--;
+        }
+      
         this.actualizarPagina();
       },
       error: (err) => {

@@ -1,92 +1,92 @@
 <nav class="navbar">
-    <h2 class="logo">Blogcert</h2>
-  
-    <div class="nav-buttons">
-      <button routerLink="/login">Iniciar sesión</button>
-      <button routerLink="/registro" >Crear cuenta</button>
-    </div>
+  <h2 class="logo">Blogcert</h2>
+
+  <div class="nav-buttons">
+    <button routerLink="/login">Iniciar sesión</button>
+    <button routerLink="/registro">Crear cuenta</button>
+  </div>
 </nav>
-  
 
-<div class="layout">
-    <aside class="sidebar">
-      <ul>
-        <li><a href="#conciertos">Conciertos</a></li>
-        <li><a href="#grupos">Grupos</a></li>
-        <li><a href="#noticias">Noticias</a></li>
-        <li><a href="#informacion">Información</a></li>
-        <li><a href="#footer">Footer</a></li>
-      </ul>
-    </aside>
-  
-    <main class="content">
+<main class="content">
 
-      <section id="informacion">
-        <h1>Bienvenido a Blogcert</h1>
-        <p>Blogcert es una aplicación web dedicada a la música. Aquí podrás seguir noticias, descubrir conciertos y conectar con grupos de personas que comparten tus mismos gustos musicales.</p>
-      </section>
+  <section id="informacion">
+    <h1>Bienvenido a Blogcert</h1>
+    <p>
+      Blogcert es una aplicación web dedicada a la música. Aquí podrás seguir noticias, descubrir conciertos y conectar con grupos de personas que comparten tus mismos gustos musicales.
+      La plataforma nace con el objetivo de crear una comunidad donde la música sea el punto de encuentro. No solo podrás mantenerte al día con las últimas novedades del panorama musical, sino también explorar eventos próximos en tu ciudad, conocer nuevos artistas y recibir recomendaciones personalizadas según tus preferencias.
+      En Blogcert tendrás acceso a un espacio dinámico donde los usuarios pueden interactuar, comentar publicaciones, compartir opiniones sobre conciertos y formar parte de grupos temáticos centrados en géneros específicos como rock, pop, electrónica, indie o música urbana. Esto permite que cada usuario viva una experiencia más cercana y participativa dentro de la comunidad.
+    </p>
+  </section>
 
-      <section id="conciertos" class="section">
-        <h2> Conciertos</h2>
-        <div class="concerts">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Concierto de Rock</h5>
-              <p class="card-text">Lugar: Madrid Arena | Fecha: 15 Marzo 2026</p>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Festival Indie</h5>
-              <p class="card-text">Lugar: Barcelona | Fecha: 21 Abril 2026</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="grupos" class="section">
-        <h2>Grupos</h2>
-        <p>En Blogcert podrás unirte a grupos de usuarios con intereses musicales similares, compartir playlists y debatir sobre tus artistas favoritos.</p>
-        <div class="concerts-examples">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Rock Legends</h5>
-              <p class="card-text">Lugar: Madrid Arena | Fecha: 15 Marzo 2026</p>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Jazz Nights</h5>
-              <p class="card-text">Lugar: Barcelona | Fecha: 21 Abril 2026</p>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Pop Fiesta</h5>
-              <p class="card-text">Lugar: Valencia | Fecha: 30 Mayo 2026</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div class="container mt-4">
-        <h2>Noticias de Música</h2>
-
-        
-        <div *ngFor="let noticia of noticias | slice:0:4" class="card news-card">
-          <div class="card-body">
-            <h5 class="card-title">{{ noticia.titular }}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">
-            Tema: {{ noticia.tema }}
-            </h6>
-            <p class="card-text">
-            {{ noticia.contenido }}
-            </p>
-          </div>
+  <section id="conciertos" class="section">
+    <h2>Conciertos</h2>
+    <div class="concerts">
+      <p>
+        En Blogcert podrás asistir a conciertos de tus artistas preferidos y mantenerte siempre al día de los próximos eventos en tu ciudad o en cualquier lugar que desees visitar. La plataforma te permitirá descubrir nuevas fechas, consultar información detallada sobre los artistas, el lugar del evento y la disponibilidad, así como conocer opiniones de otros usuarios que comparten tu misma pasión por la música.
+      </p>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Concierto de Rock</h5>
+          <p class="card-text">Lugar: Madrid Arena | Fecha: 15 Marzo 2026</p>
         </div>
       </div>
-    </main>
-</div>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Festival Indie</h5>
+          <p class="card-text">Lugar: Barcelona | Fecha: 21 Abril 2026</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="grupos" class="section">
+    <h2>Grupos</h2>
+    <p>
+      En Blogcert podrás unirte a grupos de usuarios con intereses musicales similares, compartir playlists y debatir sobre tus artistas favoritos. Estos grupos te permitirán conectar con personas que disfrutan de los mismos géneros, descubrir nueva música recomendada por la comunidad y participar en conversaciones activas sobre lanzamientos recientes, conciertos y tendencias del momento.
+    </p>
+    <div class="concerts-examples">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Rock Legends</h5>
+          <p class="card-text">Lugar: Madrid Arena | Fecha: 15 Marzo 2026</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Jazz Nights</h5>
+          <p class="card-text">Lugar: Barcelona | Fecha: 21 Abril 2026</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Pop Fiesta</h5>
+          <p class="card-text">Lugar: Valencia | Fecha: 30 Mayo 2026</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container mt-4">
+    <h2>Noticias de Música</h2>
+
+    <div *ngFor="let noticia of noticias | slice:0:4" class="card news-card">
+      <div class="card-body">
+        <h5 class="card-title">{{ noticia.titular }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">
+          Tema: {{ noticia.tematica }}
+        </h6>
+        <p class="card-text">
+          {{ noticia.contenido }}
+        </p>
+         <h6 class="card-subtitle mb-2 text-muted">
+          Tema: {{ noticia.genero }}
+        </h6>
+      </div>
+    </div>
+  </div>
+
+</main>
+
 <footer class="footer">
   <div class="footer-container">
 

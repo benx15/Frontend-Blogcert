@@ -23,6 +23,7 @@
             <th>Edad</th>
             <th>Email</th>
             <th>Rol</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -33,7 +34,6 @@
             <td>{{ usuario.lastName }}</td>
             <td>{{ usuario.age }}</td>
             <td>{{ usuario.email }}</td>
-            <td>{{ usuario.rol }}</td>
             <td>
               <span class="badge"
                 [class.badge-admin]="usuario.rol === 'ADMIN'"
@@ -54,15 +54,15 @@
       </table>
 
       <div class="paginacion">
-        <button (click)="paginaAnterior()" [disabled]="paginaActual === 1">
+        <button class="btn-pag" (click)="paginaAnterior()" [disabled]="paginaActual === 1">
           ← Anterior
         </button>
 
-        <span>
+        <span class="info-pag">
           Página {{ paginaActual }} de {{ totalPaginas }}
         </span>
 
-        <button (click)="paginaSiguiente()" [disabled]="paginaActual === totalPaginas">
+        <button class="btn-pag" (click)="paginaSiguiente()" [disabled]="paginaActual === totalPaginas">
           Siguiente →
         </button>
       </div>

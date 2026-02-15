@@ -19,33 +19,33 @@ export class DashboardCliente implements OnInit {
   constructor(
     private gruposService: GruposService,
     private eventosService: EventosService,
-    private cdr: ChangeDetectorRef  // ← AÑADIDO
+    private cdr: ChangeDetectorRef 
   ) {}
 
   ngOnInit(): void {
-    console.log('🚀 Dashboard inicializado');
+    console.log(' Dashboard inicializado');
     this.cargarDatos();
   }
 
   cargarDatos(): void {
-    console.log('📡 Cargando datos...');
+    console.log(' Cargando datos...');
     
     this.gruposService.getGrupos().subscribe({
       next: (data) => {
         this.grupos = data;
         console.log('✅ Grupos cargados:', this.grupos.length);
-        this.cdr.detectChanges(); // ← FORZAR ACTUALIZACIÓN
+        this.cdr.detectChanges(); 
       },
-      error: (err) => console.error('❌ Error grupos:', err)
+      error: (err) => console.error(' Error grupos:', err)
     });
 
     this.eventosService.getEventos().subscribe({
       next: (data) => {
         this.eventos = data;
         console.log('✅ Eventos cargados:', this.eventos.length);
-        this.cdr.detectChanges(); // ← FORZAR ACTUALIZACIÓN
+        this.cdr.detectChanges(); 
       },
-      error: (err) => console.error('❌ Error eventos:', err)
+      error: (err) => console.error(' Error eventos:', err)
     });
   }
 }

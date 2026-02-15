@@ -21,7 +21,7 @@ export class Login {
     this.login.login(this.credentials).subscribe({
       next: res => {
         localStorage.setItem('token', res.token);
-        // Redirigir según el rol
+      
         if(res.rol === 'ADMON') this.router.navigate(['/dashboard-admin']);
         else if(res.rol === 'TRABAJADOR') this.router.navigate(['/dashboard-trabajador']);
         else this.router.navigate(['/dashboard-cliente']);

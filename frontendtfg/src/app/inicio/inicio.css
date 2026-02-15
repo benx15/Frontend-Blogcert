@@ -1,9 +1,8 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Pacifico&family=Roboto+Slab:wght@700&display=swap');
 
 .navbar {
-  background-color: #000000; 
-  color: white;
+  background-color: #e2e2e2; 
+  color: #242424;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,16 +10,17 @@
 }
 
 .navbar .logo{
-  font-family: 'Pacifico', cursive;
+  font-family: 'Imperial Script', cursive;
   font-size: 2rem;
+  color: #242424;
 }
   
 .nav-buttons button {
   margin-left: 1rem;
   padding: 0.5rem 1.2rem;
   background-color: transparent;
-  color: white;
-  border: 0.1rem solid white;
+  color: #242424;
+  border: 0.1rem solid #242424;
   border-radius: 0.4rem;
   cursor: pointer;
   transition: 
@@ -31,64 +31,35 @@
   
 .nav-buttons button:hover {
   transform: translateY(-0.1rem);
-  border-color: #00ffff;
+  border-color: #242424;
   box-shadow:
-  0 0 5px #00ffff,
-  0 0 10px #00ffff,
-  0 0 20px #00ffff;
-}
-  
-
-.layout {
-  display: flex;
-  flex-direction: row-reverse;
-  min-height: calc(100vh - 4rem);
-}
-  
- 
-.sidebar {
-  width: 25%;
-  background-color: #1e1e1e;
-  color: white;
-  padding: 2rem;
-  min-height: 100%;
-}
-  
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-}
-  
-.sidebar li {
-  margin-bottom: 1.2rem;
-  cursor: pointer;
+  0 0 5px #242424,
+  0 0 10px #242424,
+  0 0 20px #242424;
 }
 
-.sidebar a {
-  color: white;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-.sidebar a:hover {
-  color: #00ffff;
-}
-  
+
 .content {
-  width: 75%;
-  color: #f1f1f1;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #242424;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #242424;
+  background-color: #ffffff;
+  text-align: center;
 }
+
 .section {
   margin-bottom: 50px;
+  width: 100%;
 }
+
 
 .container h2 {
   text-align: center;
-  color: #c0392b; 
+  color: #242424; 
   margin-bottom: 30px;
   font-family: 'Roboto Slab', serif;
 }
@@ -97,71 +68,94 @@
   font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  color: #f1f1f1;
+  color: #242424;
 }
-  
- 
+
+
+.concerts,
+.concerts-examples {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+
 .card {
-  border: 1px solid #e74c3c; 
+  width: 280px;
+  border: 1px solid #242424; 
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   transition: transform 0.2s, box-shadow 0.2s;
 }
-  
   
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
   
- 
 .card-body {
   padding: 20px;
-  background-color: #fff5f5; 
+  background-color: #f5f5f5; 
 }
   
- 
 .card-title {
-  color: #e74c3c; 
+  color: #242424; 
   font-size: 1.4rem;
   margin-bottom: 8px;
 }
   
- 
 .card-subtitle {
   font-size: 0.9rem;
-  color: #7f8c8d; 
+  color: #555; 
   margin-bottom: 15px;
 }
-  
   
 .card-text {
   font-size: 1rem;
   line-height: 1.5;
-  color: #2c3e50; 
+  color: #242424; 
 }
-  
-  
+
+
+.news-card {
+  margin-bottom: 20px;
+  border: 1px solid #eee; 
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
+  overflow: hidden;
+}
+
 .news-card .card-body {
-  padding: 20px;
-  background: linear-gradient(135deg, #ff7675, #fab1a0);
-  color: #2c3e50;
+  padding: 15px 25px; 
+  background: #ffffff; 
+  color: #333333;      
+  display: flex;       
+  flex-direction: column; 
+  justify-content: center;
 }
 
 .news-card .card-title {
-  font-size: 1.4rem;
+  font-size: 1.25rem;
   font-weight: bold;
+  margin-bottom: 5px;
+  color: #1a1a1a;
 }
 
 .news-card .card-subtitle {
-  font-size: 0.9rem;
-  margin-bottom: 10px;
-  color: #2d3436;
+  font-size: 0.85rem;
+  margin-bottom: 5px;
+  color: #666666 ;
+  display: inline-block;
+  margin-right: 15px;
 }
 
 .news-card .card-text {
-  font-size: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 10px;
 }
+
 
 .footer {
   background-color: #1e1e1e;
@@ -187,7 +181,7 @@
 
 .footer-section h3 {
   margin-bottom: 15px;
-  color: #ff4d4d;
+  color: #242424;
 }
 
 .footer-section p {
@@ -211,7 +205,7 @@
 }
 
 .footer-section a:hover {
-  color: #ff4d4d;
+  color: #242424;
 }
 
 .social-links a {
